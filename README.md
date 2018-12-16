@@ -8,6 +8,7 @@ Example Graph:
 
 Config for FreeBSD:
 
+```
 sudo python -m ensurepip # Installing pip
-
 sudo pip install numpy # Innstalling Numpy
+```
