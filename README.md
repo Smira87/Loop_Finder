@@ -1,12 +1,13 @@
 
-A py test to find all loops in undirected graphs. 
+A py script thst finds all loops in a undirected graph. 
 
 Used frameworks: Numpy.
 
-Working Example:
-https://github.com/Smira87/Loop_Finder/blob/master/Graph_Dracula.png
+Example Graph:
+![Graph example](https://github.com/Smira87/Loop_Finder/blob/master/Graph_Dracula.png)
 
 Config for FreeBSD:
 
 sudo python -m ensurepip # Installing pip
+
 sudo pip install numpy # Innstalling Numpy
