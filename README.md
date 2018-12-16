@@ -1,5 +1,5 @@
 
-A py script thst finds all loops in a undirected graph. 
+A py script thst finds all loops in example undirected graph. 
 
 Used frameworks: Numpy.
 
