@@ -28,4 +28,4 @@ def get_loops(idx, path = []):
                     cycles.append(path)
                     print [nodes[n].capitalize() for n in path]
 
-get_loops(3)
+get_loops(nodes.index('d'))
