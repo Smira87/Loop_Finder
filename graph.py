@@ -1,6 +1,7 @@
 nodes = list('abcdefghij')
 links = 'ab ac ad ea ef eb eg ec ed fa fb fg fc fd bc bd ga gb gc gd ha hd ia id ja jd dc'.split()
 mtx = [[0 for x in nodes] for y in nodes]
+loops_count = 0
 
 for i in links:
     lnk = list(i)
@@ -10,6 +11,7 @@ for i in links:
 def get_loops(idx, path = [], cycles = []):
     row = mtx[idx]
     path.append(idx)
+    global loops_count
     #print path, "=>", np.where(row)[0]
     for i in [j for j, x in enumerate(row) if x]:
         #print idx, "->", i
@@ -23,5 +25,8 @@ def get_loops(idx, path = [], cycles = []):
                 if not loop in cycles:
                     cycles.append(loop)
                     print [map(lambda j: nodes[j].capitalize(), e) for e in edges]
-
+       		    loops_count+=1;
+				
+	
 get_loops(nodes.index('d'))
+print(loops_count)
