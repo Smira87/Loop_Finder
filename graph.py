@@ -24,7 +24,7 @@ def get_loops(idx, path = [], cycles = []):
                 edges = [sorted([cyc[j], cyc[j+1]]) for j in range(len(cyc)-1)]
                 mask = sorted(edges)
                 if not mask in cycles:
-                    cycles.append(loop)
+                    cycles.append(mask)
                     print [map(lambda j: nodes[j].capitalize(), e) for e in edges]
        		    loops_count+=1;
 				
