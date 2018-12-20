@@ -13,7 +13,8 @@ def get_loops(idx, path = [], cycles = []):
     path.append(idx)
     global loops_count
     #print path, "=>", np.where(row)[0]
-    for i in [j for j, x in enumerate(row) if x]:
+    indexes = [j for j, x in enumerate(row) if x]
+    for i in indexes:	
         #print idx, "->", i
         if i not in path:
             get_loops(i, path[:], cycles)
@@ -21,8 +22,8 @@ def get_loops(idx, path = [], cycles = []):
             if path[0] == i and len(path) > 2:
                 cyc = path[:] + [i]
                 edges = [sorted([cyc[j], cyc[j+1]]) for j in range(len(cyc)-1)]
-                loop = sorted(edges)
-                if not loop in cycles:
+                mask = sorted(edges)
+                if not mask in cycles:
                     cycles.append(loop)
                     print [map(lambda j: nodes[j].capitalize(), e) for e in edges]
        		    loops_count+=1;
