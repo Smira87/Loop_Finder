@@ -1,5 +1,5 @@
 
-A py script thst finds all loops in example undirected graph. 
+A py script that finds all loops in example undirected graph. 
 
 
 Example Graph (Script counts all loops for node D, but you can change it):
